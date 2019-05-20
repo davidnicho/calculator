@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+
+  </head>
+
+  <body bg color="888888">
+      <centre>
+        <div id="dispaly">
+      <form name="calculator">
+        <input type="text" name="typed" />
+        <div class="row1">
+            <input type="button" value="    一     " onclick="calculator.typed.value += '1'"/>
+            <input type="button" value="     二     " onclick="calculator.typed.value += '2'"/>
+            <input type="button" value="     三    " onclick="calculator.typed.value += '3'"/>
+        </div>
+        <div class="row2">
+          <input type="button" value="    四     " onclick="calculator.typed.value += '4'"/>
+          <input type="button" value="     五     " onclick="calculator.typed.value += '5'"/>
+          <input type="button" value="     六    " onclick="calculator.typed.value += '6'"/>
+        </div>
+        <div class="row3">
+            <input type="button" value="    七     " onclick="calculator.typed.value += '7'"/>
+            <input type="button" value="     八     " onclick="calculator.typed.value += '8'"/>
+            <input type="button" value="     九    " onclick="calculator.typed.value += '9'"/>
+        </div>
+        <div class="row4">
+            <input type="button" value=" 零 " onclick="calculator.typed.value += '0'"/>
+            <input type="button" value=" . " onclick="point()"/>
+            <input type="button" value=" + " onclick="calculator.typed.value += ' + '"/>
+            <input type="button" value=" - " onclick="calculator.typed.value += ' - '"/>
+            <input type="button" value=" x " onclick="calculator.typed.value += ' * '"/>
+            <input type="button" value=" / " onclick="calculator.typed.value += ' / '"/>
+        </div>
+        <div class="row4">
+
+
+            <input type="button" value="          =           " onclick="calculator.answer.value = eval(calculator.typed.value)"/>
+            <input type="button" value="  Go Away  " onclick="buttonClear ()"/>
+          </div>
+            <input type="text" name="answer" />
+       
+      </form>
+     
+
+    </div>
+  </div>          
+<script>
+  function point () {
+    calculator.typed.value +=".";
+  }
+  function buttonClear () {
+    [calculator.typed.value, calculator.answer.value] = "0";
+  }
+</script>
+
+
+</body>
+
+</html>
